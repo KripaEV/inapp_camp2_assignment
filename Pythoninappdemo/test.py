@@ -13,3 +13,4 @@ import sys
 
 mystring2="Good morning"
 print(mystring2.find('Go'))
+#test check 1,2,3
