@@ -1,3 +1,5 @@
+"""
+#print the birth stone and personality type
 monthno=input("Enter your birth month number:")
 match(monthno):
     case '1':
@@ -26,5 +28,17 @@ match(monthno):
         print("December-People born in December are confident and freedom loving\nStone-Zircon")
     case _:
         print("Invalid month")
-    
+"""
+
+#print nos divisible by 5 and multiple of 8 btn 2000 and 2500
+for num in range(2000,2501):
+    if num%5==0 and num%8==0:
+        print(num)
+
+
+#create multiplication table frm 1 to 10 getting user input
+num=input("Enter the number:")
+num=int(num)
+for i in range(1,11):
+    print(num,"*",i,"=",(num * i))
 
