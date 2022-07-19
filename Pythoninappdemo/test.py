@@ -178,6 +178,43 @@ def http_status(status):
 
 #calling func inside print stmt
 print(http_status(404))
+
+
+#loop
+#for
+fruits=['apples','mango','strawberry']
+for fruit in fruits:#without index, just the item
+    print(fruit)
+
+for index,fruit in enumerate(fruits):#for index value
+    print(index,fruit)
+
+#while
+ctr=5
+while ctr>0:
+    print("ctr = ",ctr)
+    ctr=ctr-1
+
+#break
+j=0
+for i in range(10):
+    j=j+2
+    print('i=',i,'j=',j)
+    if(j==6):
+        break
+
+#continue
+j=0
+for i in range(10):
+    j=j+2
+    print('i=',i,'j=',j)
+    if(j==6):
+        continue
+    print('j value is:',j)
 """
-
-
+#try and except
+try:
+    answer=12/0
+    print(answer)
+except:
+    print("Some friendly error msg")
