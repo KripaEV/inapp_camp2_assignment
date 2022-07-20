@@ -1,4 +1,5 @@
 from abc import ABC
+from operator import truediv
 import sys
 """
 #print("Hello World")
@@ -211,10 +212,96 @@ for i in range(10):
     if(j==6):
         continue
     print('j value is:',j)
-"""
+
 #try and except
 try:
     answer=12/0
     print(answer)
 except:
     print("Some friendly error msg")
+
+#funcs
+def checkifprime(num):
+    for x in range(2,num):
+        if(num%x==0):
+            return True
+        return False
+print(checkifprime(15))#false
+
+def calculation(a,b):
+    add=a+b
+    sub=a-b
+    mul=a*b
+    div=a%b
+    return(add,sub,mul,div)
+
+output=calculation(4,5)
+print("Add result",output[0])
+print("Sub result",output[1])
+print("Mul result",output[2])
+print("Div result",output[3])
+
+#demonstrating variable scope
+msg="Global var"#global var
+
+def myfunction():
+    global msg #enable global var
+    print("inside function")
+    print(msg)
+    msg2="Local var"
+    print(msg2)
+
+myfunction()
+
+
+#passing list of arg into func
+def make_pizza(size,*toppings):
+    print(f"\nMaking a {size}-inch pizza wih foll toppings:")
+    for top in toppings:
+        print(f"{top}")
+make_pizza(12,"mozzarella")
+make_pizza(16,"pepperoni","mushrooms","olive")
+
+
+#lambda func 
+sum=lambda a,b:a+b
+print("sum of two num",sum(2,3))
+
+#importing a module
+import random as r
+print(r.randrange(1,10))
+
+#random built in module
+import random
+print(random.random())
+print(random.randint(5,20))
+print(random.choice(["head","tail"]))
+
+myshirt=["blue","red"]
+random.shuffle(myshirt)
+print(myshirt)
+
+random.seed(100)
+print(random.random())
+
+import datetime
+print(datetime.datetime.now())
+
+#creating custom datetime obj
+birthday=datetime.datetime(2022,7,18)
+print(birthday)
+
+#time comparison
+from datetime import datetime as dt
+
+if dt(dt.now().year,dt.now().month,dt.now().day,9)<dt.now()<dt(dt.now().year,dt.now().month,dt.now().day,18):
+    print("Works")
+else:
+    print("shift completed")
+"""
+
+#calling the custom module created
+import prime
+
+ans=prime.checkifprime(10)
+print(ans)
