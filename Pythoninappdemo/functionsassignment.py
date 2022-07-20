@@ -1,4 +1,4 @@
-"""
+
 #1.GST ASSIGNMENT
 price=int(input("Enter the price of the item:"))
 gst=int(input("Enter the GST rate:"))
@@ -79,7 +79,7 @@ while(1):
             print(searchno())
         case '6':
             break
-"""
+
 
 #3.Rock-Paper-Scissors
 import random
